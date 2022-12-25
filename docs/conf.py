@@ -14,8 +14,31 @@ release = '1.0'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+    "sphinx-favicon",
+]
 
+favicons = [
+    
+    {
+        "rel": "icon",
+        "sizes": "16x16",
+        "href": "https://secure.example.com/favicon/favicon-16x16.png",
+        "type": "image/png",
+    },
+    {
+        "rel": "icon",
+        "sizes": "32x32",
+        "href": "https://secure.example.com/favicon/favicon-32x32.png",
+        "type": "image/png",
+    },
+    {
+        "rel": "apple-touch-icon",
+        "sizes": "180x180",
+        "href": "https://secure.example.com/favicon/apple-touch-icon-180x180.png",
+        "type": "image/png",
+    },
+]
 templates_path = ['_templates']
 exclude_patterns = []
 
