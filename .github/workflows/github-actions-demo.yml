@@ -23,6 +23,10 @@ jobs:
           auto-update-conda: false
           auto-activate-base: false
           show-channel-urls: true
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
       - name: Installing the library
         run: |
           pip install sphinx-favicon
