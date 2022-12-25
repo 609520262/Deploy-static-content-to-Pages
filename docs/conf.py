@@ -30,7 +30,7 @@ html_static_path = ['_static']
 # 定义的插件，分别是支持markdown的插件和支持markdown表格的插件
 # pip insatll recommonmark
 # pip install sphinx_markdown_tables
-extensions = ['recommonmark','sphinx_markdown_tables', 'sphinx-favicon',]
+extensions = ['recommonmark','sphinx_markdown_tables', 'sphinx-favicon']
 favicons = [
     
 
