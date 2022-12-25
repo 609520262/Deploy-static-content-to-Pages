@@ -25,7 +25,7 @@ jobs:
           show-channel-urls: true
       - name: Installing the library
         run: |
-          pip3 install sphinx-favicon
+          pip install sphinx-favicon
       - name: Running the Sphinx to gh-pages Action
         uses: uibcdf/action-sphinx-docs-to-gh-pages@v1.0.0
         with:
