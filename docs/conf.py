@@ -14,31 +14,9 @@ release = '1.0'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = [
-  "sphinx-favicon",
-]
 
-favicons = [
-    
-    {
-        "rel": "icon",
-        "sizes": "16x16",
-        "href": "https://secure.example.com/favicon/favicon-16x16.png",
-        "type": "image/png",
-    },
-    {
-        "rel": "icon",
-        "sizes": "32x32",
-        "href": "https://secure.example.com/favicon/favicon-32x32.png",
-        "type": "image/png",
-    },
-    {
-        "rel": "apple-touch-icon",
-        "sizes": "180x180",
-        "href": "https://secure.example.com/favicon/apple-touch-icon-180x180.png",
-        "type": "image/png",
-    },
-]
+
+
 templates_path = ['_templates']
 exclude_patterns = []
 
@@ -52,7 +30,22 @@ html_static_path = ['_static']
 # 定义的插件，分别是支持markdown的插件和支持markdown表格的插件
 # pip insatll recommonmark
 # pip install sphinx_markdown_tables
-extensions = ['recommonmark','sphinx_markdown_tables']
+extensions = ['recommonmark','sphinx_markdown_tables', 'sphinx-favicon',]
+favicons = [
+    
 
+    {
+        "rel": "icon",
+        "sizes": "32x32",
+        "href": "https://pluspng.com/img-png/png-dodo-2015-09-28-1443450200-228294-dodo-png-350.png",
+        "type": "image/png",
+    },
+    {
+        "rel": "apple-touch-icon",
+        "sizes": "180x180",
+        "href": "https://secure.example.com/favicon/apple-touch-icon-180x180.png",
+        "type": "image/png",
+    },
+]
 # 解析文件格式
 source_suffix = {'.rst': 'restructuredtext','.md': 'markdown'}
