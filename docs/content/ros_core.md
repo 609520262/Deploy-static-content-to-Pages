@@ -32,7 +32,7 @@ rosshutdown
 > Shutting down global node /matlab_global_node_94513 with NodeURI http://dcc434238glnxa64:43127/ and MasterURI http://localhost:57063.
 Shutting down ROS master on http://172.29.207.162:57063.
 
-# 连接外部的`master`主节点
+## 连接外部的`master`主节点
 还可以使用`rosinit`命令(这里需要指定主机地址)连接到外部ROS主机（例如在机器人或虚拟机上运行）。可以通过两种方式指定主机的地址：通过IP地址或运行主机的计算机的主机名。
 
 同一台机器上在每次调用`rosinit`之后，必须先调用`rosshutdown`，然后再使用不同的语法调用`rosinit`,防止出现节点冗余错误。
@@ -53,7 +53,7 @@ rosinit('master_host',12000)
 ```c
 rosinit('http://192.168.1.1:12000')
 ```
-# 特别指定节点的主机
+## 特别指定节点的主机
 在某些情况下，您的计算机可能连接到多个网络并具有多个IP地址。此图显示了一个示例。![在这里插入图片描述](https://img-blog.csdnimg.cn/8f2a9970663345b298815f614d88a859.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2FuZHlfXzE=,size_20,color_FFFFFF,t_70,g_se,x_16)
 左下角的计算机运行MATLAB，并连接到两个不同的网络。在一个子网中，其IP地址为`173.195.120.50`，在另一个子网中，其IP地址为`192.168.1.100`。此计算机希望连接到TurtleBot®计算机上IP地址为`192.168.1.1`的ROS主机。作为向主机注册的一部分，MATLAB全局节点必须指定其他ROS节点可以访问的IP地址或主机名。TurtleBot上的所有节点都将使用此地址向MATLAB中的全局节点发送数据。
 
@@ -68,7 +68,7 @@ rosinit('master_host','NodeHost','192.168.1.100')
 以上命令选择其中之一即可。
 在ROS网络中注册节点后，您可以使用命令`rosnode info<nodename>`查看其播发的地址。通过调用节点列表，可以查看所有已注册节点的名称。
 
-# ROS 环境变量
+## ROS 环境变量
 在高级用例中，您可能希望通过标准ROS环境变量指定ROS主机的地址和播发的节点地址。前面几节中解释的语法对于大多数用例来说应该足够了。
 
 如果没有为`rosinit`提供参数，该函数还将检查标准ROS环境变量的值。这些变量是`ROS_MASTER_URI`、`ROS_HOSTNAME`和`ROS_IP`。可以使用getenv命令查看它们的当前值：
