@@ -51,9 +51,7 @@ Welcome to Entropy theory's documentation!   Hello World！
     :maxdepth: 2
     :glob:
 
-    base/index
-    advance/index
-    mark/index
+    content/*
 
 
 =====================================================
