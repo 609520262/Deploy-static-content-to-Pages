@@ -3,8 +3,17 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Entropy theory's documentation!   Hello World！
+Welcome to Entropy theory's documentation!  
 ==========================================
+版权声明
+------------
+.. note:: 
+    本书为开源图书，版权归作者所有；欢迎下载及编辑(个人用途)，但未经作者同意必须保留此段声明，且不可用于商业用途，否则保留追究法律责任的权利。
+
+    - 作者：IMLAB
+    - 博客：https://bambooxking.github.io
+    - Github地址：https://github.com/bambooxking/rst-tutorial
+
 前言
 ------------
 这本书专注于 **ReStructuredText** 格式的最常用用法，以便读者能以最快时间掌握。
