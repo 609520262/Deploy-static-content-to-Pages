@@ -30,7 +30,10 @@ html_static_path = ['_static']
 # 定义的插件，分别是支持markdown的插件和支持markdown表格的插件
 # pip insatll recommonmark
 # pip install sphinx_markdown_tables
-extensions = ['recommonmark','sphinx_markdown_tables', 'sphinx-favicon']
+extensions = ['recommonmark','sphinx_markdown_tables', 'sphinx-favicon','sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.mathjax',
+    'recommonmark']
 favicons = [
     
 
@@ -47,5 +50,22 @@ favicons = [
         "type": "image/png",
     },
 ]
+import sys
+import os
+import shlex
+
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use os.path.abspath to make it absolute, like shown here.
+sys.path.insert(0, os.path.abspath('..'))
+import recommonmark
+from recommonmark.transform import AutoStructify
 # 解析文件格式
 source_suffix = {'.rst': 'restructuredtext','.md': 'markdown'}
+github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/doc/'
+def setup(app):
+    app.add_config_value('recommonmark_config', {
+            'url_resolver': lambda url: github_doc_root + url,
+            'auto_toc_tree_section': 'Contents',
+            }, True)
+    app.add_transform(AutoStructify)
