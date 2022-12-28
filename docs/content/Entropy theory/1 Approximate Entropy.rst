@@ -42,13 +42,12 @@
   ApEn\left( {m,r,N} \right) = {\phi ^m}\left( r \right) - {\phi ^{m + 1}}\left( r \right) \tag{6}
 
 .. note:: This is a note admonition.
- 近似熵是由Pincus\ :sup:`[1]`\提出的，建议的参数选择为：
+ 近似熵是由Pincus  [#]_，提出的，建议的参数选择为：
 
  - 嵌入维度  :math:`m=2` 
  - 容限  :math:`r`   一般取 `0.1~0.2` 倍时间序列的标准差（SD）。在后续的仿真验证中，我们选择   :math:`r = 0.15 \times {\rm{SD}}` 。
 
 
- 
 代码实现
 ~~~~~~~~~~~~~~~
 这里假设您已经获得本项目的的所有代码，若您此时还未获得有关程序，请移步到  :doc:`/content/install`
@@ -95,3 +94,7 @@
 .. figure:: /images/计算效率结果/Apen.png
    :alt: 计算效率结果
    :align: center 
+
+
+
+..  [#] S. M. Pincus, “Approximate entropy as a measure of system complexity.,” Proc. Natl. Acad. Sci., vol. 88, no. 6, pp. 2297–2301, Mar. 1991, doi: 10.1073/pnas.88.6.2297.

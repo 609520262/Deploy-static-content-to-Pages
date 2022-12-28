@@ -55,7 +55,7 @@
  - 容限  :math:`r`   一般取 `0.1~0.25` 倍时间序列的标准差（SD）。
  - 参数 :math:`n=2`  。在后续的仿真验证中，我们选择 :math:`m=2` ,  :math:`n=2` ，  :math:`r = 0.15 \times {\rm{SD}}` 。
 
-..  [#] 此处为参考文献
+
  
 代码实现
 ~~~~~~~~~~~~~~~
@@ -115,3 +115,4 @@
  
 
  
+..  [#] W. Chen, Z. Wang, H. Xie, and W. Yu, “Characterization of Surface EMG Signal Based on Fuzzy Entropy,” IEEE Trans. Neural Syst. Rehabil. Eng., vol. 15, no. 2, pp. 266–272, Jun. 2007, doi: 10.1109/TNSRE.2007.897025.

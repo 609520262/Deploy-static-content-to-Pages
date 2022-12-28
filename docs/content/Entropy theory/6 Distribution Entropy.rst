@@ -34,7 +34,7 @@
  - 嵌入维度  :math:`m = 2`  ,
  - 区间数  :math:`M=512` 
 
-..  [#] 此处为参考文献
+
  
 代码实现
 ~~~~~~~~~~~~~~~
@@ -87,3 +87,4 @@
    :alt: 计算效率结果
    :align: center 
 
+..  [#] P. Li, C. Liu, K. Li, D. Zheng, C. Liu, and Y. Hou, “Assessing the complexity of short-term heartbeat interval series by distribution entropy,” Med. Biol. Eng. Comput., vol. 53, no. 1, pp. 77–87, Jan. 2015, doi: 10.1007/s11517-014-1216-0.

@@ -37,7 +37,7 @@
  -  :math:`c=6` 
   
 
-..  [#] 此处为参考文献
+
  
 代码实现
 ~~~~~~~~~~~~~~~
@@ -98,6 +98,6 @@
    :align: center 
 
  
- 
+..  [#] M. Rostaghi and H. Azami, “Dispersion Entropy: A Measure for Time-Series Analysis,” IEEE Signal Process. Lett., vol. 23, no. 5, pp. 610–614, May 2016, doi: 10.1109/LSP.2016.2542881.
 
  

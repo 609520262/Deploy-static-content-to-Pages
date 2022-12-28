@@ -35,7 +35,7 @@
  - 嵌入维度  :math:`m = 4`  ,
  - 符号数  :math:`\varepsilon  = 30 \sim 100`  ,在后续的仿真验证中，我们选择  :math:`m = 4` ，:math:`\varepsilon=30`  。
 
-..  [#] 此处为参考文献
+
  
 代码实现
 ~~~~~~~~~~~~~~~
@@ -97,3 +97,4 @@
    :align: center 
 
  
+..  [#] X. Wang, S. Si, and Y. Li, “Multiscale Diversity Entropy: A Novel Dynamical Measure for Fault Diagnosis of Rotating Machinery,” IEEE Trans. Ind. Inform., vol. 17, no. 8, pp. 5419–5429, Aug. 2021, doi: 10.1109/TII.2020.3022369.

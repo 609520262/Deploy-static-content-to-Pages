@@ -44,7 +44,7 @@
  - 嵌入维度  :math:`m=2` 
  - 容限  :math:`r`   一般取 `0.1~0.25` 倍时间序列的标准差（SD）。在后续的仿真验证中，我们选择 :math:`m=2` ,   :math:`r = 0.15 \times {\rm{SD}}` 。
 
-..  [#] 这是第一个注记的信息
+
 
  
 代码实现
@@ -76,7 +76,7 @@
 ------------------------------------
 
 .. figure::  /images/单尺度脉冲检测结果/SE.png
-   :alt: 1.	样本熵的脉冲检测结果
+   :alt: 样本熵的脉冲检测结果
    :align: center
 
  
@@ -101,5 +101,7 @@
    :alt: 计算效率结果
    :align: center 
  
-
  
+
+
+..  [#] J. S. Richman and J. R. Moorman, “Physiological time-series analysis using approximate entropy and sample entropy,” Am. J. Physiol.-Heart Circ. Physiol., vol. 278, no. 6, pp. H2039–H2049, Jun. 2000, doi: 10.1152/ajpheart.2000.278.6.H2039.

@@ -47,7 +47,7 @@
  - 符号数  :math:`\varepsilon  = 12` 
  - 时间延迟  :math:`\lambda  = 1`  
 
-..  [#] 此处为参考文献
+
  
 代码实现
 ~~~~~~~~~~~~~~~
@@ -109,6 +109,6 @@
 
 
  
- 
+..  [#] Y. Li, Y. Yang, G. Li, M. Xu, and W. Huang, “A fault diagnosis scheme for planetary gearboxes using modified multi-scale symbolic dynamic entropy and mRMR feature selection,” Mech. Syst. Signal Process., vol. 91, pp. 295–312, Jul. 2017, doi: 10.1016/j.ymssp.2016.12.040.
 
  

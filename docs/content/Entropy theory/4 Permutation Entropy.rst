@@ -35,7 +35,7 @@
 
  - 嵌入维度  :math:`m = 3 \sim 7`  ,在后续的仿真验证中，我们选择  :math:`m = 6` 。
 
-..  [#] 此处为参考文献
+
  
 代码实现
 ~~~~~~~~~~~~~~~
@@ -97,5 +97,5 @@
    :align: center 
  
  
-
+..  [#] C. Bandt and B. Pompe, “Permutation Entropy: A Natural Complexity Measure for Time Series,” Phys. Rev. Lett., vol. 88, no. 17, p. 174102, Apr. 2002, doi: 10.1103/PhysRevLett.88.174102.
  
