@@ -70,7 +70,7 @@
 近似熵的脉冲检测结果
 ------------------------------------
 
-.. figure::  ../images/aeClass.png
+.. figure::  /images/单尺度脉冲检测结果/Apen.png
    :alt: 近似熵的脉冲检测结果
    :align: center
 
@@ -78,10 +78,20 @@
 多尺度近似熵的故障分类可视化结果
 ------------------------------------
  
-.. figure:: ../images/aeEffecience.png
+.. figure:: /images/多尺度可视化结果/MultiApEn.png
    :alt: 多尺度近似熵的故障分类可视化结果
    :align: center
  
+抗噪性分析
+------------------------------------
  
+.. figure:: /images/抗噪性结果/MultiApEn.png
+   :alt: 抗噪性分析
+   :align: center 
 
+计算效率结果
+------------------------------------
  
+.. figure:: /images/计算效率结果/Apen.png
+   :alt: 计算效率结果
+   :align: center 
