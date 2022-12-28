@@ -17,8 +17,8 @@
 .. math::
     d\left[ {X\left( i \right),X\left( j \right)} \right] = \mathop {\max }\limits_{k = 0,1, \cdots ,m - 1} \left[ {\left| {x\left( {i + k} \right) - x\left( {j + k} \right)} \right|} \right] \tag{2}
 
-
-对于 :math:`X\left( i \right),1 \le i \le N - m + 1`，需要计算其与剩余其他向量 :math:`X\left( j \right),1 \le j \le N,j \ne i` 之间的 :math:`d\left[ {X\left( i \right),X\left( j \right)} \right]`。因此对任意 :math:`X\left( i \right)` 都有  :math:`N - m` 个距离 。
+.. important:: 
+  对于 :math:`X\left( i \right),1 \le i \le N - m + 1`，需要计算其与剩余其他向量 :math:`X\left( j \right),1 \le j \le N,j \ne i` 之间的 :math:`d\left[ {X\left( i \right),X\left( j \right)} \right]`。因此对任意 :math:`X\left( i \right)` 都有  :math:`N - m` 个距离 。
 
 3.	给定阈值 :math:`r` ，对于所有的 :math:`X\left( i \right)` ，统计 :math:`d\left[ {X\left( i \right),X\left( j \right)} \right]` 中小于阈值 :math:`r` 的数量，然后这个数量与总距离数 :math:`N - m`  的比值记为:
 
@@ -51,9 +51,9 @@
  
 代码实现
 ~~~~~~~~~~~~~~~
-这里假设您已经获得本项目的的所有代码，若您此时还未获得有关程序，请移步到 :doc:`/content/11`
+这里假设您已经获得本项目的的所有代码，若您此时还未获得有关程序，请移步到  :doc:`/content/install`
 
-近似熵(Approximate Entropy)的核心程序为 **ApproximateEntropy**
+近似熵(Approximate Entropy)的核心程序为  ``ApproximateEntropy``
 
 .. highlight:: sh
 

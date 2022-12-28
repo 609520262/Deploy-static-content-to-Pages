@@ -7,8 +7,8 @@ Welcome to Entropy theory's documentation!
 ==========================================
 版权声明
 ------------
-.. note:: 
-    本书为开源图书，版权归作者所有；欢迎下载及编辑(个人用途)，但未经作者同意必须保留此段声明，且不可用于商业用途，否则保留追究法律责任的权利。
+.. warning::
+    欢迎下载及编辑(个人用途)，但未经作者同意必须保留此段声明，且不可用于商业用途，否则保留追究法律责任的权利。
 
     - 作者：IMLAB
     - 博客：https://bambooxking.github.io
@@ -61,8 +61,8 @@ Welcome to Entropy theory's documentation!
     :glob:
     :caption: 快速上手熵值
 
-    content/about_us.rst
-    content/install.md
+
+    content/install.rst
     content/quick_start.md
 
 .. toctree::
@@ -71,6 +71,13 @@ Welcome to Entropy theory's documentation!
     :caption: Entropy theory 熵值理论
 
     content/Entropy theory/*
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+    :caption: 关于我们
+
+    content/about_us.rst
 
 =====================================================
 索引

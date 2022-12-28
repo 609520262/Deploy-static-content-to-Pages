@@ -4,14 +4,14 @@
 
 ## 一、简介
 
-本章将介绍如何安装PaddleClas及其依赖项。
+本章帮助您获得Entropy theory的所有源码以及配置您进行熵值实验的所需环境。
 
 
-## 二、安装PaddlePaddle
+## 二、Entropy theory源码获取
 
-运行PaddleClas需要PaddlePaddle 2.0rc或更高版本。请参照[安装文档](http://www.paddlepaddle.org.cn/install/quick)中的说明进行操作。
+本节内容将演示两种不同的获取Entropy theory的所有源码的方式
 
-如果已经安装好了cuda、cudnn、nccl或者安装好了docker、nvidia-docker运行环境，可以pip安装最新GPU版本PaddlePaddle
+请确保
 
 ```bash
 pip install paddlepaddle-gpu --upgrade
