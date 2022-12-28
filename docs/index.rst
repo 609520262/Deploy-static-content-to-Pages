@@ -59,9 +59,18 @@ Welcome to Entropy theory's documentation!
 .. toctree::
     :maxdepth: 2
     :glob:
+    :caption: 快速上手熵值
 
-    content/*
+    content/about_us.rst
+    content/install.md
+    content/quick_start.md
 
+.. toctree::
+    :maxdepth: 2
+    :glob:
+    :caption: Entropy theory 熵值理论
+
+    content/Entropy theory/*
 
 =====================================================
 索引
