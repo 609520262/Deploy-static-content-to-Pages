@@ -51,7 +51,7 @@
  
 代码实现
 ~~~~~~~~~~~~~~~
-这里假设您已经获得本项目的的所有代码，若您此时还未获得有关程序，请移步到 :doc:`/content/11`
+这里假设您已经获得本项目的的所有代码，若您此时还未获得有关程序，请移步到  :doc:`/content/install`
 
 符号动力学熵(Symbolic dynamic Entropy)的核心程序为  ``MultiscaleSymbolicDynamicEntropy``
 
