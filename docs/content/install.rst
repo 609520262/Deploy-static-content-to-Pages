@@ -16,7 +16,7 @@
  -  克隆 ``clone`` 远程Entropy theory的方式
  -  直接下载Entropy theory  ``zip`` 包
  
- .. attention:: 
+.. attention:: 
    假如您有一定的  ``git`` 使用经验，推荐您采用第一种 **远程克隆** 的方式获取本实验室的Entropy theory的源码，我们将不间断地更新课题组实验室的最新熵值程序，确保您能够即使获取最新源码。
 
 .. hint:: 
