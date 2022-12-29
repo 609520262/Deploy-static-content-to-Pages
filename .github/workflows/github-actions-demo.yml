@@ -27,7 +27,7 @@ jobs:
         shell: bash -el {0}
         run: pip install sphinx-favicon
       - name: Running the Sphinx to gh-pages Action
-         run: |
+         run： |
           cd docs
           make html 
       - name: Deploy
