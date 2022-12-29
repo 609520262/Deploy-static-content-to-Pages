@@ -27,8 +27,10 @@ jobs:
         shell: bash -el {0}
         run: pip install sphinx-favicon
       - name: Clean install dependencies and build
-        run: cd docs
-        run: make html 
+        shell: bash
+        run： |
+          cd docs
+          make html
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
