@@ -34,4 +34,11 @@ jobs:
           sphinxapiopts: '--separate -o . ../'
           sphinxapiexclude: '../*setup* ../*.ipynb'
           sphinxopts: ''
+      - name: Installing the library
+        shell: bash -el {0}
+        run:  |
+          git checkout gh-pages
+          git add CNAME
+          git commit -m "add CNAME"
+          git push -u origin gh-pages       
      
