@@ -27,8 +27,8 @@ jobs:
         shell: bash -el {0}
         run: pip install sphinx-favicon
       - uses: ammaraskar/sphinx-action@master
-         with:
-           docs-folder: "docs/"
+        with:
+          docs-folder: "docs/"
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
