@@ -27,9 +27,9 @@ jobs:
         shell: bash -el {0}
         run: pip install sphinx-favicon
      - name: Build the sphinx documentation and posts warnings as github comments.
-        uses: rickstaa/sphinx-action@main
-        with:
-          docs-folder: "./docs"
+        run:
+           cd docs
+           make html 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
