@@ -26,10 +26,9 @@ jobs:
       - name: Installing the library
         shell: bash -el {0}
         run: pip install sphinx-favicon
-      - name: Running the Sphinx to gh-pages Action
-         run： |
-          cd docs
-          make html 
+      - name: Clean install dependencies and build
+        run: cd docs
+        run: make html 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
