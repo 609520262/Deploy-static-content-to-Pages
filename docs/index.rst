@@ -11,8 +11,8 @@ Welcome to Entropy theory's Lab!
     欢迎下载及编辑(个人用途)，但未经作者同意必须保留此段声明，且不可用于商业用途，否则保留追究法律责任的权利。
 
     - 作者：IMLAB
-    - 博客：https://bambooxking.github.io
-    - Github地址：https://github.com/bambooxking/rst-tutorial
+    - 博客：https://github.com/609520262/Entropy-theory
+    - Github地址：https://github.com/609520262/Entropy-theory
 
 
 目录
