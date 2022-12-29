@@ -11,7 +11,8 @@
 .. math::
     {x_m}\left( i \right) = \left\{ {x\left( i \right),x\left( {i + 1} \right), \cdots ,x\left( {i + m - 1} \right)} \right\} - x0\left( i \right),1 \le i \le N - m + 1 \tag{1}
 
-这里的 :math:`x0\left( i \right)` 为基线向量，通过去除基线进行泛化。:math:`x0\left( i \right)`  定义为
+.. important:: 
+   这里的 :math:`x0\left( i \right)` 为基线向量，通过去除基线进行泛化。:math:`x0\left( i \right)`  定义为
 
 .. math::
   x0\left( i \right) = \frac{1}{m}\sum\limits_{k = 0}^{m - 1} {{x_m}\left( {i + k} \right)} \tag{2}
@@ -26,7 +27,8 @@
 .. math::
     D_{ij}^m\left( {n,r} \right) = \mu \left( {d_{ij}^m,n,r} \right) \tag{4}
 
-模糊函数 :math:`\mu \left( {d_{ij}^m,n,r} \right)` 为指数函数，如下:
+.. important:: 
+   模糊函数 :math:`\mu \left( {d_{ij}^m,n,r} \right)` 为指数函数，如下:
 
 .. math::
   \mu \left( d_{ij}^{m},n,r \right)=\exp \left( {-{{\left( d_{ij}^{m} \right)}^{n}}}/{r}\; \right) \tag{5}
