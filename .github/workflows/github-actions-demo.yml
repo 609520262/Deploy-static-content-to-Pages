@@ -39,4 +39,6 @@ jobs:
         run:  |
           git checkout gh-pages
           git checkout main CNAME     
-     
+          git commit -m "add file"
+          git pull origin gh-pages --rebase
+          git push origin gh-pages
