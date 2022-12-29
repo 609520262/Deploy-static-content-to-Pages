@@ -26,14 +26,10 @@ jobs:
       - name: Installing the library
         shell: bash -el {0}
         run: pip install sphinx-favicon
-      - name: Running the Sphinx to gh-pages Action
-        uses: uibcdf/action-sphinx-docs-to-gh-pages@v1.0.0
+      - name: Build the sphinx documentation and posts warnings as github comments.
+        uses: rickstaa/sphinx-action@master
         with:
-          branch: main
-          dir_docs: docs
-          sphinxapiopts: '--separate -o . ../'
-          sphinxapiexclude: '../*setup* ../*.ipynb'
-          sphinxopts: ''
+          docs-folder: "./docs"
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
