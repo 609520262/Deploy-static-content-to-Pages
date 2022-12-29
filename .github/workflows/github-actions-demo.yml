@@ -26,13 +26,13 @@ jobs:
       - name: Installing the library
         shell: bash -el {0}
         run: pip install sphinx-favicon
-     - name: Build the sphinx documentation and posts warnings as github comments.
+      - name: Running the Sphinx to gh-pages Action
         run:
-           cd docs
-           make html
+          cd docs
+          make html 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir:  ./
+          publish_dir: ./_build/html
           cname: entropytheory.ink
