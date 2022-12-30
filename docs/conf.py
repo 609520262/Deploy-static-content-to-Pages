@@ -15,11 +15,9 @@ release = '1.0'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 html_context = {
-    "display_github": True, # Add 'Edit on Github' link instead of 'View page source'
-    "last_updated": True,
-    "commit": False,
-    "github_url": "https://github.com/609520262/Deploy-static-content-to-Pages"
- }
+    'display_github': True,
+    'github_repo': '609520262/Deploy-static-content-to-Pages'
+               }
 
 
 html_logo = './images/logo.png'
