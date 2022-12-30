@@ -17,7 +17,7 @@ release = '1.0'
 html_context = {
     'display_github': True,
     'github_url': 'https://github.com/609520262/Deploy-static-content-to-Pages'
-               }`
+               }
 
 
 
