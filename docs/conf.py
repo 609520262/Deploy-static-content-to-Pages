@@ -14,10 +14,7 @@ release = '1.0'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-html_context = {
-    'display_github': True,
-    'github_url': 'https://github.com/609520262/Deploy-static-content-to-Pages'
-               }
+'github_url': 'https://github.com/609520262/Deploy-static-content-to-Pages'
 
 
 
@@ -68,7 +65,7 @@ import recommonmark
 from recommonmark.transform import AutoStructify
 # 解析文件格式
 source_suffix = {'.rst': 'restructuredtext','.md': 'markdown'}
-# github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/doc/'
+
 def setup(app):
     app.add_config_value('recommonmark_config', {
             'url_resolver': lambda url: github_doc_root + url,
