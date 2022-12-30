@@ -15,7 +15,8 @@ release = '1.0'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 
-
+github_doc_root = 'https://github.com/609520262/Deploy-static-content-to-Pages'
+html_logo = './images/logo.png'
 
 templates_path = ['_templates']
 exclude_patterns = []
