@@ -68,7 +68,7 @@ import recommonmark
 from recommonmark.transform import AutoStructify
 # 解析文件格式
 source_suffix = {'.rst': 'restructuredtext','.md': 'markdown'}
-github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/doc/'
+# github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/doc/'
 def setup(app):
     app.add_config_value('recommonmark_config', {
             'url_resolver': lambda url: github_doc_root + url,
