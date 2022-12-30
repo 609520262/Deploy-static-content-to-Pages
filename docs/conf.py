@@ -15,7 +15,7 @@ release = '1.0'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 html_context = {
-    'display_github': True，
+   'display_github': True，
    'github_url': 'https://github.com/609520262/Deploy-static-content-to-Pages'
                }
 
