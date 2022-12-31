@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <link rel="icon" href="https://pluspng.com/img-png/png-dodo-2015-09-28-1443450200-228294-dodo-png-350.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="https://secure.example.com/favicon/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>散度熵(Diversity Entropy) &mdash; Entropy theory 1.0 文档</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="分布熵(Distribution Entropy)" href="6%20Distribution%20Entropy.html" />
+    <link rel="prev" title="排列熵(Permutation Entropy)" href="4%20Permutation%20Entropy.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Entropy theory
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">快速上手熵值</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">安装说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick_start.html">快速上手熵值</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Entropy theory 熵值理论</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1%20Approximate%20Entropy.html">近似熵(Approximate Entropy)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2%20Sample%20entropy%20.html">样本熵(Sample entropy)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3%20Fuzzy%20entropy.html">模糊熵(Fuzzy entropy)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4%20Permutation%20Entropy.html">排列熵(Permutation Entropy)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">散度熵(Diversity Entropy)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">基本原理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">代码实现</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">仿真验证</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">散度熵的脉冲检测结果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">多尺度散度熵的故障分类可视化结果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">抗噪性分析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">计算效率结果</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="6%20Distribution%20Entropy.html">分布熵(Distribution Entropy)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7%20Symbolic%20dynamic%20Entropy.html">符号动力学熵(Symbolic dynamic Entropy)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8%20Dispersion%20Entropy.html">色散熵(Dispersion Entropy)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">关于我们</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about_us.html">关于IMLAB</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Entropy theory</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">散度熵(Diversity Entropy)</li>
+<li class="wy-breadcrumbs-aside">
+   <a href="https://github.com/609520262/Deploy-static-content-to-Pages/tree/main/docs/index.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
+</li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="diversity-entropy">
+<h1>散度熵(Diversity Entropy)<a class="headerlink" href="#diversity-entropy" title="此标题的永久链接"></a></h1>
+<section id="id1">
+<h2>基本原理<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
+<p>有长度为 <span class="math notranslate nohighlight">\(N\)</span>  的时间序列  <span class="math notranslate nohighlight">\(X = \left\{ {{x_1}, \cdots ,{x_i}, \cdots ,{x_N}} \right\}\)</span>，散度熵的计算步骤如下：</p>
+<ol class="arabic simple">
+<li><p>将原始序列相空间重构为一系列的向量 <span class="math notranslate nohighlight">\({y_i}\left( m \right) = \left\{ {{x_i},{x_{i + 1}}, \cdots ,{x_{i + m - 1}}} \right\}\)</span> ，嵌入维度为 <span class="math notranslate nohighlight">\(m\)</span>  ，得到如下的相空间:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[Y\left( m \right) = \left\{ {{y_1}\left( m \right),{y_2}\left( m \right), \cdots ,{y_{N - m + 1}}\left( m \right)} \right\} \tag{1}\]</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><span class="math notranslate nohighlight">\({y_{N - M + 1}}\left( m \right)={\left\{ {{x_m},{x_{m + 1}}, \cdots , \cdots ,{x_N}} \right\}^T}\)</span> 均为列向量，<span class="math notranslate nohighlight">\(Y\left( m \right)\)</span> 构成 <span class="math notranslate nohighlight">\((N - m,m)\)</span> 维矩阵。</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>计算相邻向量之间的余弦相似度，得到一系列的余弦相似度 ，余弦相似度的计算如下：</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[D\left( m \right) = \left\{ {{d_1}, \cdots ,{d_{N - m}}} \right\} = \left\{ {d\left( {{y_1}\left( m \right),{y_2}\left( m \right)} \right), \cdots ,d\left( {{y_{N - m}}\left( m \right),{y_{N - m + 1}}\left( m \right)} \right)} \right\} \tag{2}\]</div>
+<div class="math notranslate nohighlight">
+\[d\left( {{y_i}\left( m \right),{y_j}\left( m \right)} \right) = \frac{{\sum\limits_{k = 1}^m {{y_i}\left( k \right) \times {y_j}\left( k \right)} }}{{\sqrt {\sum\limits_{k = 1}^m {{y_i}{{\left( k \right)}^2}} }  \times \sqrt {\sum\limits_{k = 1}^m {{y_j}{{\left( k \right)}^2}} } }} \tag{3}\]</div>
+<ol class="arabic simple" start="3">
+<li><p>余弦相似度的范围为 <span class="math notranslate nohighlight">\(\left[ { - 1,1} \right]\)</span> ，将 <span class="math notranslate nohighlight">\(\left[ { - 1,1} \right]\)</span>  分为 <span class="math notranslate nohighlight">\(\varepsilon\)</span> 个子区间 <span class="math notranslate nohighlight">\(\left( {{I_1},{I_2}, \cdots ,{I_\varepsilon }} \right)\)</span>  。然后将所有余弦相似度划分到子区间中，统计落入每个子区间的概率 <span class="math notranslate nohighlight">\(\left( {{P_1},{P_2}, \cdots ,{P_\varepsilon }} \right)\)</span> 。</p></li>
+<li><p>DE可以被定义为:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[DE\left( {m,\varepsilon ,N} \right) =  - \frac{1}{{\ln \varepsilon }}\sum\limits_{k = 1}^\varepsilon  {{P_k}\ln {P_k}}   \tag{4}\]</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>散度熵是由Wang等人 <a class="footnote-reference brackets" href="#id9" id="id2">1</a>，提出的，建议的参数选择为：</p>
+<ul class="simple">
+<li><p>嵌入维度  <span class="math notranslate nohighlight">\(m = 4\)</span>  ,</p></li>
+<li><p>符号数  <span class="math notranslate nohighlight">\(\varepsilon  = 30 \sim 100\)</span>  ,在后续的仿真验证中，我们选择  <span class="math notranslate nohighlight">\(m = 4\)</span> ，<span class="math notranslate nohighlight">\(\varepsilon=30\)</span>  。</p></li>
+</ul>
+</div>
+</section>
+<section id="id3">
+<h2>代码实现<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<p>这里假设您已经获得本项目的的所有代码，若您此时还未获得有关程序，请移步到  <a class="reference internal" href="../install.html"><span class="doc">安装说明</span></a></p>
+<p>模糊熵(Fuzzy entropy)的核心程序为  <code class="docutils literal notranslate"><span class="pre">MultiDispEn</span></code></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>function [MDE]=MultiDispEn(data,m,nc,tau,scale)
+
+    MDE=[];
+    data=data&#39;;
+    for j=1:scale
+        Xs = Multi(data,j,1);
+        [de]=DisEn_NCDF(Xs&#39;,m,nc,tau);
+        MDE=[MDE,de];
+    end
+end
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>各输入参数的信息如下：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code>：输入的时间序列，为列向量</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">m</span></code> :嵌入维度</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nc</span></code>  : 类别数目</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tau</span></code> :时间差</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scale</span></code> :尺度比</p></li>
+</ul>
+</div>
+</section>
+<section id="id4">
+<h2>仿真验证<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
+<section id="id5">
+<h3>散度熵的脉冲检测结果<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h3>
+<figure class="align-center">
+<img alt="散度熵的脉冲检测结果" src="../../_images/DivEn.png" />
+</figure>
+</section>
+<section id="id6">
+<h3>多尺度散度熵的故障分类可视化结果<a class="headerlink" href="#id6" title="此标题的永久链接"></a></h3>
+<figure class="align-center">
+<img alt="多尺度散度熵的故障分类可视化结果" src="../../_images/MultiDivEn.png" />
+</figure>
+</section>
+<section id="id7">
+<h3>抗噪性分析<a class="headerlink" href="#id7" title="此标题的永久链接"></a></h3>
+<figure class="align-center">
+<img alt="抗噪性分析" src="../../_images/DivEn1.png" />
+</figure>
+</section>
+<section id="id8">
+<h3>计算效率结果<a class="headerlink" href="#id8" title="此标题的永久链接"></a></h3>
+<figure class="align-center">
+<img alt="计算效率结果" src="../../_images/DivEn2.png" />
+</figure>
+<dl class="footnote brackets">
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><ol class="upperalpha simple" start="24">
+<li><p>Wang, S. Si, and Y. Li, “Multiscale Diversity Entropy: A Novel Dynamical Measure for Fault Diagnosis of Rotating Machinery,” IEEE Trans. Ind. Inform., vol. 17, no. 8, pp. 5419–5429, Aug. 2021, doi: 10.1109/TII.2020.3022369.</p></li>
+</ol>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="4%20Permutation%20Entropy.html" class="btn btn-neutral float-left" title="排列熵(Permutation Entropy)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="6%20Distribution%20Entropy.html" class="btn btn-neutral float-right" title="分布熵(Distribution Entropy)" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, IMLAB.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
