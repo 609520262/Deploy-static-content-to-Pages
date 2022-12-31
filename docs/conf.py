@@ -30,6 +30,9 @@ language = 'zh_CN'
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+html_css_files = [
+    'css/style.css',
+]
 # 定义的插件，分别是支持markdown的插件和支持markdown表格的插件
 # pip insatll recommonmark
 # pip install sphinx_markdown_tables
